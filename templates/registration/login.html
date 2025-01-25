@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}login{% endblock  %}
+{% block content %}
+
+    {% if form.error %}
+        <p>please enter a valaid data</p>
+    {% else %}
+        <p>please enter your username and password</p>
+    {% endif %}
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form axtion="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="hidden" name="next" value="{{ next }}">
+            <p><input type="submit" value="Login" class="login-btn"></p>
+        </form>
+    </div>
+{% endblock %}

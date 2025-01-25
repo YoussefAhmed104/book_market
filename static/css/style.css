@@ -1,0 +1,189 @@
+/* إعدادات أساسية للصفحة */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #2446c3, #fefefe);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* لتمكين ترتيب العناصر الرأسية */
+    justify-content: flex-start; /* يبدأ الترتيب من الأعلى */
+    align-items: center;
+    color: #fff;
+}
+
+/* تنسيق الحاوية الرئيسية */
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 20px; /* لإضافة مسافة بين الهيدر والحاوية */
+}
+
+/* عنوان الصفحة */
+.login-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+/* الحقول */
+.login-container input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+/* الزر */
+.login-btn {
+    background-color: #2575fc;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.login-btn:hover {
+    background-color: #1a5bbf;
+}
+
+/* تنسيق عام للهيدر */
+.header {
+    display: flex;
+    justify-content: space-between; /* توزيع العناصر بالتساوي */
+    align-items: center; /* لمحاذاة العناصر عموديًا */
+    padding: 20px;
+    background-color: #192793; /* لون خلفية الهيدر */
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    border-radius: 0; /* إزالة الحواف المستديرة */
+    position: relative; /* لتمكين التحكم في العناصر بداخله */
+    width: 100vw; /* يجعل العرض يغطي كامل نافذة العرض */
+    margin: 0; /* إزالة أي فراغات افتراضية */
+    box-sizing: border-box; /* لضمان أن الحشوات لا تؤثر على العرض */
+}
+
+/* تنسيق الشعار */
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    flex: 1; /* يأخذ مساحة متاحة */
+    text-align: left; /* محاذاة النص إلى اليسار */
+}
+
+/* تنسيق القائمة */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    flex: 1; /* يأخذ مساحة متاحة */
+    justify-content: center; /* محاذاة العناصر إلى الوسط */
+}
+
+/* تنسيق الروابط داخل القائمة */
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+/* تغيير لون الرابط عند التمرير */
+.menu li a:hover {
+    background-color: #fff;
+    color: #4CAF50;
+}
+
+/* تمييز العنصر النشط */
+.menu .selected a {
+    background-color: #fff;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* تنسيق العنصر الذي يحتوي على معلومات المستخدم */
+.user {
+    display: flex;
+    align-items: center; /* محاذاة النص والعناصر داخل الـ span */
+    gap: 10px; /* إضافة مسافة بين العناصر */
+    font-size: 16px;
+    color: #fff;
+    flex: 1; /* يأخذ مساحة متاحة */
+    justify-content: flex-end; /* محاذاة العناصر إلى اليمين */
+}
+
+/* تنسيق النص الذي يظهر للمستخدم عندما يكون مسجلاً */
+.user a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* تغيير لون الرابط عند التمرير */
+.user a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* إضافة تنسيق للنص داخل .user عند وجود المستخدم */
+.user span {
+    font-size: 16px;
+    color: #fff;
+    font-weight: normal;
+}
+
+/* تنسيق الحالة عند إضافة مستخدم مسجل */
+.user.logged-in {
+    font-weight: bold; /* إظهار اسم المستخدم بشكل بارز */
+}
+
+/* إخفاء الرابط "login" في حالة تسجيل الدخول */
+.user .login {
+    display: none;
+}
+
+/* إخفاء الرابط "logout" في حالة عدم تسجيل الدخول */
+.user .logout {
+    display: none;
+}
+
+/* تنسيق الزر داخل .user */
+.user button {
+    background-color: #2575fc;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.user button:hover {
+    background-color: #1a5bbf;
+}

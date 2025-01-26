@@ -16,6 +16,7 @@
             {{ form.as_p }}
             <input type="hidden" name="next" value="{{ next }}">
             <p><input type="submit" value="Login" class="login-btn"></p>
+            <a href="{% url 'password_reset' %}">Forget password ?</a>
         </form>
     </div>
 {% endblock %}

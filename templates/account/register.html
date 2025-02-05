@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} sighn up {% endblock title %}
+
+{% block content %}
+
+    <div class="change-password-container">
+        <h1> Creat a new account </h1>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p><input type="submit" value="Login" class="login-btn"></p>
+        </form>
+    </div>
+
+{% endblock content %}

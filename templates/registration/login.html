@@ -11,12 +11,13 @@
 
     <div class="login-container">
         <h2>Login</h2>
-        <form axtion="{% url 'login' %}" method="post">
+        <form action="{% url 'login' %}" method="post">
             {% csrf_token %}
             {{ form.as_p }}
             <input type="hidden" name="next" value="{{ next }}">
             <p><input type="submit" value="Login" class="login-btn"></p>
-            <a href="{% url 'password_reset' %}">Forget password ?</a>
+            <a href="{% url 'password_reset' %}">Forget password ?</a><br><hr>
+            <a href="{% url 'register' %}">Creat a new account</a>
         </form>
     </div>
 {% endblock %}

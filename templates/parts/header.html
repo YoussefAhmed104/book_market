@@ -12,11 +12,15 @@
                 <li {% if section == 'people' %} class="selected"{% endif %}>
                     <a href="#">People</a>
                 </li>
+                <li{% if section == 'edit' %} class="selected"{% endif %}>
+                    <a href="{% url 'edit' %}">Edit Profile</a>
+                </li>
             </ul>
         {% endif %}
 
+        {% if request.user.is_authenticated %}
+        <img src="{{ request.user.profile.photo.url }}" alt="{{ request.user.username }}" class="profile-pic">
         <span class="user">
-            {% if request.user.is_authenticated %}
                 Hello {{ request.user.first_name | default:request.user.username }}
                 <form action="{% url 'logout' %}" method="post" style="display:inline;">
                     {% csrf_token %}

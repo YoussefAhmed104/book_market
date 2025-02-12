@@ -187,3 +187,81 @@ body {
 .user button:hover {
     background-color: #1a5bbf;
 }
+
+
+
+.change-password-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 20px; /* لإضافة مسافة بين الهيدر والحاوية */
+}
+
+.change-password-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.change-password-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.change-password-container input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.change-password-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.change-password-container form p {
+    margin: 0;
+}
+
+/* تنسيق الرسالة الناتجة عن تغيير كلمة المرور */
+.change-password-done {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #0ca25af3;
+    border-radius: 8px;
+    background-color: #ffffff11;
+    box-shadow: 0 4px 6px rgba(27, 3, 209, 0.1);
+    text-align: center;
+}
+
+.change-password-done h1 {
+    font-size: 24px;
+    color: #00ff88;
+    margin-bottom: 10px;
+}
+
+.change-password-done p {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0;
+}
+
+
+.profile-pic{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #fff;
+}

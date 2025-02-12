@@ -25,7 +25,6 @@ urlpatterns = [
 
     #edit user profile
     path('edit/', views.edit, name='edit'),
-    path('edit-done/',views.edit_done,name='edit_done'),
 
     path('dashboard/', views.dashboad , name='dashboard'),
 ]
